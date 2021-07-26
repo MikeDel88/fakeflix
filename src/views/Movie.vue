@@ -163,7 +163,7 @@ export default {
       this.watch = false;
     },
     video: function (id) {
-      return `https://www.youtube.com/embed/${id}?controls=0`;
+      return `https://www.youtube.com/embed/${id}?controls=1`;
     },
     verifFavorite: function (fav) {
       if (fav != undefined) {

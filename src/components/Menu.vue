@@ -7,6 +7,9 @@
       md-elevation="0"
     >
       <div class="md-layout-item">
+        <md-button class="md-accent" v-on:click="logout">
+          Déconnexion
+        </md-button>
         <md-button class="md-accent">
           <router-link class="md-accent" :to="{ name: 'Accueil'}">Accueil</router-link>
         </md-button>
@@ -40,6 +43,15 @@ export default {
     Logo,
   },
   props: {},
+  methods:{
+    logout: function(){
+      this.$store.commit('SessionId', "")
+      this.$store.commit('Status', false)
+      this.$store.commit('AccountId', null)
+      this.$router.push('/')
+      console.log('Déconnexion réussie')
+    }
+  }
 
 };
 </script>

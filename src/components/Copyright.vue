@@ -1,6 +1,6 @@
 <template>
     <div>
-        FakeFlix &copy; 2020 - Powered by <a :href="url" target="_blank" class="md-accent">{{website}}</a>
+        FakeFlix &copy; {{ year.getFullYear() }} - Powered by <a :href="url" target="_blank" class="md-accent">{{website}}</a>
     </div>
 </template>
 <script>
@@ -10,7 +10,8 @@ export default {
   data:function(){
     return{
         website:"themoviedb.org",
-        url:"https://www.themoviedb.org/"
+        url:"https://www.themoviedb.org/",
+        year: new Date()
     }
   },
 };

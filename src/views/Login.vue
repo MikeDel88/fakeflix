@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     check: async function () {
-      if (this.user == "" || this.user == "") {
+      if (this.user == "") {
         this.error = true;
       } else {
         let response = await fetch(
@@ -84,7 +84,7 @@ export default {
       );
       let getInfoUser = await getUser.json();
 
-      if (getInfoUser.success == true) {
+      if (getInfoUser.success) {
         console.log("Connexion OK");
 
         let token = {
@@ -103,7 +103,7 @@ export default {
           }
         );
         let getSessionId = await session.json();
-        if (getSessionId.success == true) {
+        if (getSessionId.success) {
           this.$store.commit("SessionId", getSessionId.session_id);
           this.$store.dispatch("loadAccount");
           this.$store.commit("Status", true);

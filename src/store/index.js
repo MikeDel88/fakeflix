@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import {API_KEY} from '../../env'
 
 Vue.use(Vuex)
 
@@ -15,7 +16,7 @@ export default new Vuex.Store({
     favorisMovie: [],
     watchMovies: [],
     status: false,
-    APIkey: '**************',
+    APIkey: API_KEY,
     siteWebAPI: 'https://api.themoviedb.org/3'
   },
   getters: {

@@ -11,7 +11,7 @@ export default {
     research: "Rechercher un film",
   }),
   methods: {
-    searchStr(research) {
+    searchStr: function(research) {
       this.requestAPI(research);
     },
     requestAPI: _.debounce(function (string) {

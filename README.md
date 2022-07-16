@@ -1,24 +1,5 @@
 # fakeflix2
 
-## Project setup
-```
-npm install
-```
+#Projet de formation
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Apprentissage d'un framework JavaScript à la suite du JS Vanilla.
